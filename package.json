@@ -1,5 +1,5 @@
 {
-  "name": "lib-card-validator",
+  "name": "validatorgihirao",
   "version": "1.0.0",
   "description": "credit card validator",
   "main": "index.js",
@@ -20,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/gigihirao/lib-card-validator/issues"
   },
-  "homepage": "https://github.com/gigihirao/lib-card-validator#readme"
+  "homepage": "https://github.com/gigihirao/lib-card-validator#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0"
+  },
+  "directories": {
+    "test": "test"
+  }
 }

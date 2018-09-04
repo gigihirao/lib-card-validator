@@ -1,3 +1,4 @@
+module.exports = cardValidator();
 function cardValidator(number){
 
   let reverseSequence = [];
@@ -13,10 +14,10 @@ function cardValidator(number){
   let cardNumber = String(number);
 
   if (cardNumber.length <= 1){
-    throw new Error ("Conter mais que 1 digito");
+    throw new TypeError ("Conter mais que 1 digito");
   }
 
-  for (var i = 0 ; i < number.length ; i++){
+  for (var i = 0 ; i < number ; i++){
     reverseSequence[i] = number.charAt(i);
   }
   cardInverted = reverseSequence.reverse();
@@ -35,8 +36,8 @@ function cardValidator(number){
   }
 
   if (sumOfNumbs % 10 == 0){
-    document.getElementById('app').innerHTML = 'Válido';
+    return 'Válido';
   } else {
-    document.getElementById('app').innerHTML = 'Inválido';
+    return 'Inválido';
   }
 }
