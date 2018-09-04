@@ -1,4 +1,4 @@
-module.exports = cardValidator();
+module.exports = cardValidator;
 function cardValidator(number){
 
   let reverseSequence = [];
@@ -7,18 +7,18 @@ function cardValidator(number){
   let sumOfNumbs = 0;
   let newCardNumb = [];
 
-  if (typeof(number) === "string"){
-    throw new Error ('Somente números');
+  if (typeof(number) === 'string'){
+    throw new Error ('Aceita-se somente números');
   }
 
   let cardNumber = String(number);
 
   if (cardNumber.length <= 1){
-    throw new TypeError ("Conter mais que 1 digito");
+    throw new TypeError ('Deve conter mais de 1 dígito');
   }
 
-  for (var i = 0 ; i < number ; i++){
-    reverseSequence[i] = number.charAt(i);
+  for (var i = 0 ; i < cardNumber.length ; i++){
+    reverseSequence[i] = cardNumber.charAt(i);
   }
   cardInverted = reverseSequence.reverse();
   for (var j = 1 ; j < cardInverted.length ; j+=2){
@@ -36,8 +36,8 @@ function cardValidator(number){
   }
 
   if (sumOfNumbs % 10 == 0){
-    return 'Válido';
+    return true;
   } else {
-    return 'Inválido';
+    return false;
   }
 }

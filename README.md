@@ -12,8 +12,8 @@ Exemplo de uso:
 
 ```
 $node
-> let convert = require("chayote-lib")
-> convert(1); //'um'
+> let validate = require('validatorgihirao')
+> validate(4402955352166921); // true
 ```
 
 ## instalação
@@ -24,11 +24,13 @@ $node
 
 ## roadmap oficial do projeto
 
-#### versão 1.0.1
-- correção de bugs de 
-- implementação da opção "letras maiúsculas ou minúsculas";
-- implementação da opção de incluir moeda na conversão.
+#### versão 2.0.0 (no ETA)
+- validação de cartões de crédito com números variádos.
 
-#### versão 1.0.0
+#### versão 1.0.1 (released)
+- correção da validação de autenticidade para true ou false.
+- correção dos bugs de uso de variável errada.
+
+#### versão 1.0.0 (released)
 - valida quantidade de números.
 - valida autenticidade do cartão.

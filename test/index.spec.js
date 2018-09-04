@@ -16,10 +16,10 @@ describe('cardValidator()', () => {
           expect(() => cardValidator('')).to.throw(Error);
       })
       it('Quando o número do cartão for válido', () => {
-          expect(() => cardValidator(5555555555555555)).to.be.true;
+          expect(cardValidator(4402955352166921)).to.be.true;
       })
       it('Quando o número do cartão dor inválido', () => {
-          expect(() => cardValidator(1234352637482749)).to.be.false;
+          expect(cardValidator(1234352637482749)).to.be.false;
       })
   });
 });
