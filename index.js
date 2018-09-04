@@ -1,10 +1,10 @@
 let cardNumber;
 var error = function (){
-    if (cardNumber.length === 0 || cardNumber === "" || cardNumber.length != 16){
-        throw new TypeError ("Invalid Card");
+    if (cardNumber.length === 0 || cardNumber === "" || cardNumber.length <= 1){
+        throw new Error ("Somente números e contendo mais que 1 digito");
     };
 };
-function cardValidator(numb){
+function cardValidator(number){
   let reverseSequence = [];
   let cardInverted = [];
   let doubledPairs = 0;
@@ -14,8 +14,8 @@ function cardValidator(numb){
     cardNumber = prompt('Insira o número do Cartão de Crédito');
   } while (!cardNumber);
   
-  for (var i = 0 ; i < numb.length ; i++){
-    reverseSequence[i] = numb.charAt(i);
+  for (var i = 0 ; i < number.length ; i++){
+    reverseSequence[i] = number.charAt(i);
   }
   cardInverted = reverseSequence.reverse();
   
