@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('cardTests', () => {
   describe("#cardValidator", () => {
       it('Quando o campo estiver vazio', () => {
-          
+          assert
       })
   });
 });
