@@ -9,7 +9,7 @@ describe('cardValidator()', () => {
       it('Deve retornar vazio quando o tamanho for 0', () => {
           expect(() => cardValidator(0)).to.throw(TypeError);
       })
-      it('Quando for inserido somente um dígito', () => {
+      it('Deve for inserido somente um dígito', () => {
           expect(() => cardValidator(1)).to.throw(TypeError);
       })
       it('Quando for inserido uma string', () => {

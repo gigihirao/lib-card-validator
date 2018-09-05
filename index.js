@@ -17,11 +17,11 @@ function cardValidator(number){
     throw new TypeError ('Deve conter mais de 1 dígito');
   }
 
-  for (var i = 0 ; i < cardNumber.length ; i++){
+  for (let i in cardNumber){
     reverseSequence[i] = cardNumber.charAt(i);
   }
   cardInverted = reverseSequence.reverse();
-  for (var j = 1 ; j < cardInverted.length ; j+=2){
+  for (let j = 1 ; j < cardInverted.length ; j+=2){
     doubledPairs = cardInverted[j] * 2;
     if (doubledPairs >= 10){
       newCardNumb = doubledPairs.toString().split("");
@@ -31,8 +31,8 @@ function cardValidator(number){
     }
   }
 
-  for (var j = 0 ; j < cardInverted.length ;  j+=2) {
-    sumOfNumbs = parseInt(cardInverted[j]) + sumOfNumbs;
+  for (let j in cardInverted) {
+    sumOfNumbs = parseInt(cardInverted[j] + 2) + sumOfNumbs;
   }
 
   if (sumOfNumbs % 10 == 0){
